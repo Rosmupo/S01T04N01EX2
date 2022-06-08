@@ -22,7 +22,7 @@ class CalculateIdTest {
 //las diferentes opciones disponibles.
 
     @ParameterizedTest
-    @CsvSource({"11111111, H", "49812198, V", "22222222, J", "33333333,P",
+    @CsvSource({"11111111, H", "49812197, Q", "22222222, J", "33333333,P",
             "59849248, M","40954950, T","20943203,R", "56567675, A",
             "23212123, V", "56345342,'B'"})
     void testIdCsv(int argument, char letter){
@@ -37,11 +37,10 @@ class CalculateIdTest {
         char result = calculateId.calculateLetterId();
         assertEquals(letter, result);
     }
-
     static Stream<Arguments> stringIntAndListProvider() {
         return Stream.of(
                 arguments(11111111,'H'),
-                arguments(49812198,'V'),
+                arguments(49812197,'Q'),
                 arguments(22222222,'J'),
                 arguments(33333333,'P'),
                 arguments(59849248,'M'),
